@@ -33,7 +33,26 @@ const customersToWorkersMap = {};
 //   }
 // ]
 
-const customers = [];
+const customers = 
+    [
+      {
+         customer_id: 98,
+         display_name: 'Bobby Shaftoe',
+         channels: [
+             { type: 'email', value: 'bobby@example.com' },
+             { type: 'sms', value: '+123456789' },
+             { type: 'whatsapp', value: 'whatsapp:+123456789' }
+         ],
+         links: [
+             { type: 'Facebook', value: 'https://facebook.com', display_name: 'Social Media Profile' }
+         ],
+         details:{
+             title: "Information",
+             content: "Status: Active" + "\n\n" + "Score: 100"
+         },
+         worker: 'eren@manjo.com'
+      }
+    ];
 
 const findWorkerForCustomer = async (customerNumber) => customersToWorkersMap[customerNumber];
 
